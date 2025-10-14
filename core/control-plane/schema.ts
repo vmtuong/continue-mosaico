@@ -12,6 +12,7 @@ const modelDescriptionSchema = z.object({
     "replicate",
     "gemini",
     "mistral",
+    "mosaico",
     "bedrock",
     "sagemaker",
     "cloudflare",

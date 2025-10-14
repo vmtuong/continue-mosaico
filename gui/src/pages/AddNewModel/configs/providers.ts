@@ -359,6 +359,44 @@ Select the \`GPT-4o\` model below to complete your provider configuration, but n
     ],
     apiKeyUrl: "https://console.mistral.ai/codestral",
   },
+  mosaico: {
+    title: "Mosaico",
+    provider: "mosaico",
+    description: "A2A-compatible LLM agent communication system",
+    icon: "mosaico.png",
+    longDescription:
+      "Mosaico provides agent-to-agent (A2A) communication with LLM agents. Configure your Mosaico agent endpoint to get started.",
+    tags: [ModelProviderTags.Local, ModelProviderTags.OpenSource],
+    // packages: [
+    //   {
+    //     ...models.AUTODETECT,
+    //     params: {
+    //       ...models.AUTODETECT.params,
+    //       title: "Mosaico",
+    //       model: "mosaico-default",
+    //     },
+    //   },
+    // ],
+    packages: [models.mosaicoDefault, models.mosaicoAdvanced],
+    collectInputFor: [
+      {
+        inputType: "text",
+        key: "apiKey",
+        label: "API Key",
+        placeholder: "Enter your Mosaico API key (optional)",
+        required: false,
+      },
+      {
+        inputType: "text",
+        key: "apiBase",
+        label: "API Base URL",
+        placeholder: "e.g. http://localhost:12000",
+        defaultValue: "http://localhost:12000",
+        required: false,
+      },
+      ...completionParamsInputsConfigs,
+    ],
+  },
   ollama: {
     title: "Ollama",
     provider: "ollama",

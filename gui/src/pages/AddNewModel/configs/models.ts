@@ -1841,6 +1841,35 @@ export const models: { [key: string]: ModelPackage } = {
     isOpenSource: false,
   },
 
+  // MOSAICO Placeholder Models
+  mosaicoDefault: {
+    title: "Mosaico Default",
+    description:
+      "Mosaico Default is a default generative model in Mosaico project.",
+    params: {
+      title: "Mosaico Default",
+      model: "mosaico-default",
+      contextLength: 32000,
+    },
+    icon: "MOSAICO.png",
+    providerOptions: ["mosaico"],
+    isOpenSource: true,
+  },
+  // MOSAICO Placeholder Models
+  mosaicoAdvanced: {
+    title: "Mosaico Advanced",
+    description:
+      "Mosaico Advanced is an advanced generative model in Mosaico project.",
+    params: {
+      title: "Mosaico Advanced",
+      model: "mosaico-advanced",
+      contextLength: 32000,
+    },
+    icon: "MOSAICO.png",
+    providerOptions: ["mosaico"],
+    isOpenSource: true,
+  },
+
   // CometAPI Models
 
   // GPT series models via CometAPI
